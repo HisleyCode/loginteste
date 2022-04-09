@@ -1,72 +1,53 @@
-:root{
-    --colorPrincipal: #8460D0;
-    --backgroundInput: #c4c4c446;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
 
-body{
-    margin: 0px;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Polvo Login</title>
+</head>
 
-h1{
-    text-align: center;
-    font-size: 2rem;
-}
+<body>
+    <section>
+        <form method="post" action="#">
+            <div class="container">
 
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+                <!-- Logo e Texto principal -->
+                <div>
+                    <img src="imagens/Logo.svg" alt="Logo do polvo">
 
-form{    
-    /*  background-color: yellowgreen; */
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+                    <h1>Bem<span style="color: #8460D0;"> vindo!</span></h1>
+                </div>
 
-p{
-    font-family: Arial, Helvetica, sans-serif;
-}
+                <!-- Usuário e senha -->
+                <div>
+                    <p>
+                        <input type="text" placeholder="Email:"> <br> <br>
+                        <input type="password" placeholder="Senha:">
+                    </p>
+                </div>
 
-.container{
-    border-radius: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
-}
+                <!-- checkbox - manter logado -->
+                <div>
+                    <p>
+                        <input id="manter_login" type="checkbox" name="manterlogado">
+                        <label for="manterlogado">Manter conectado</label>
+                    </p>
+                </div>
 
-input:not([type="checkbox"]){
-    width: 18rem;
-    height: 22px;
-    border: 1px solid #dddfe2;
-    background-color: var(--backgroundInput);
-    border-radius: 15px;
-    font-size: 15px;
-    padding: 14px;
-    outline: 0;
-    
-}
+                <!-- Botão de Login -->
+                <div>
+                    <p>
+                        <input id="bottom-login" type="submit" value="Login">
+                    </p>
+                    <p class="link">Não possui conta? <a href="Cad/cadastro.html">Cique aqui!</a></p>
+                </div>
 
-input::placeholder{
-    color: #000;
-}
+            </div>
+        </form>
+    </section>
+</body>
 
-#bottom-login{
-    background-color: var(--colorPrincipal);
-    border: none;
-    border-radius: 15px;
-    color: #ffff;
-    font-size: 20px;
-    width: 18rem;
-    height: 60px;
-}
-
-/* Link */
-a{
-    color: var(--colorPrincipal);
-}
+</html>
